@@ -28,9 +28,11 @@ steps:
 - name: publish
   image: plugins/ecr
   settings:
-    repo: 864091978270.dkr.ecr.ap-southeast-2.amazonaws.com/drone-ecr-registry-plugin
-    registry: 864091978270.dkr.ecr.ap-southeast-2.amazonaws.com/drone-ecr-registry-plugin
-    region: ap-southeast-2
+    #repo: 864091978270.dkr.ecr.ap-southeast-2.amazonaws.com/drone-ecr-registry-plugin
+    #registry: 864091978270.dkr.ecr.ap-southeast-2.amazonaws.com/drone-ecr-registry-plugin
+    repo: 191213556404.dkr.ecr.us-east-1.amazonaws.com/drone-ecr-registry-plugin
+    registry: 191213556404.dkr.ecr.us-east-1.amazonaws.com
+    #region: ap-southeast-2
     dockerfile: docker/Dockerfile
     tags:
       - latest
