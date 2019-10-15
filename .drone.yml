@@ -39,5 +39,6 @@ steps:
     event:
       - push
       - tag
+
 #    branch:
 #      - master
