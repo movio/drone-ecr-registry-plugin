@@ -26,13 +26,11 @@ steps:
       - pull_request
 
 - name: publish
-  image: plugins/docker
+  image: plugins/ecr
   settings:
-    repo: davidbyttow/drone-ecr-registry-plugin
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
+    repo: 864091978270.dkr.ecr.ap-southeast-2.amazonaws.com/drone-ecr-registry-plugin:latest
+    registry: 864091978270.dkr.ecr.ap-southeast-2.amazonaws.com/drone-ecr-registry-plugin:latest
+    region: ap-southeast-2
     dockerfile: docker/Dockerfile
     tags:
       - latest
@@ -41,5 +39,5 @@ steps:
     event:
       - push
       - tag
-    branch:
-      - master
+#    branch:
+#      - master

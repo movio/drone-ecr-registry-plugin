@@ -12,6 +12,10 @@ $ docker push your/repo:latest
 
 See Makefile for more build options.
 
+```
+docker run --rm -v `pwd`:/go -w="/go" -e GOARCH=amd64 -e GOOS=linux -e GOPATH= -ti custom-go1.13:latest make linux-amd64
+```
+
 ## Running the service
 
 ```

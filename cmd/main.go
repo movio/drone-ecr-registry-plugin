@@ -69,8 +69,10 @@ func main() {
 		logger,
 	)
 
+        healthzHandler := plugin.HandleHealthz()
 	logrus.Infof("Server listening on address %s", spec.Address)
 
 	http.Handle("/", handler)
+        http.Handle("/healthz",healthzHandler)
 	logrus.Fatal(http.ListenAndServe(spec.Address, nil))
 }
